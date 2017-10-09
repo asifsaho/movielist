@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .modal-dialog {
     margin: 150px auto;
+}
+
+.margin-right-0 {
+    margin-right: 0 !important;
 }
 
 input.form-control {
@@ -18,11 +22,11 @@ input.form-control {
 }
 
 form {
-	margin: 0;
+    margin: 0;
 }
 
 .custom-select {
-    padding: 4px 5;
+    padding: 4px 5px;
     margin: 0;
     width: 150px;
     border-radius: 3px;
@@ -43,23 +47,17 @@ form {
     background-color: transparent;
     background-image: none;
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .custom-select select:focus {
     outline: none;
 }
 
-.inline-label {
-    padding: 11px;
-    margin: 0;
-    float: left;
-}
-
 input.form-control:focus {
-	box-shadow: none;
-	border-bottom: 2px solid rgb(81, 157, 232);
+    box-shadow: none;
+    border-bottom: 2px solid rgb(81, 157, 232);
 }
 
 .btn {
@@ -70,12 +68,12 @@ input.form-control:focus {
 }
 
 .container {
-	padding-top: 30px;
+    padding-top: 30px;
 }
 
 .header {
     padding: 15px;
-    background-color: rgb(16,108,200);
+    background-color: rgb(16, 108, 200);
     color: #fff;
     display: inline-block;
     width: 100%;
@@ -83,17 +81,39 @@ input.form-control:focus {
 }
 
 label {
-	display: block;
+    display: block;
 }
 
 .actions {
     text-align: right;
+    padding-top: 15px;
+}
+
+.nav-item {
+    float: left;
+    margin-right: 6px;
+}
+
+.nav-item .btn {
+    margin: 0;
+}
+
+.nav-item .add-movie {
+    padding: 13px 12px 13px 14px;
+}
+
+.nav-item label {
+    padding: 11px 5px 11px 10px;
+    margin: 0;
 }
 
 .btn-group .btn {
-	background-color: rgb(48, 136, 224);
+    background-color: rgb(48, 136, 224);
     border: 3px;
     color: #fff;
+
+    padding: 14px 8px 13px 14px;
+    text-align: center;
 }
 
 .btn-group .btn:focus {
@@ -102,19 +122,46 @@ label {
 }
 
 .btn-group .glyphicon {
-	margin-right: 5px;
+    margin-right: 5px;
 }
 
 .modal-header {
     padding: 15px;
     border-bottom: 1px solid #e5e5e5;
-    background: rgb(16,108,200);
+    background: rgb(16, 108, 200);
     color: #fff;
 }
 
 
 
 
+
+@media (max-width: 767px) {
+    .mobile-hide {
+        display: none;
+    }
+
+    .nav-item .btn span {
+        display: none;
+    }
+
+    .custom-select {
+        width: 100px;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .modal-dialog {
+        margin: 0 auto;
+    }
+
+    .list-group-item:first-child,
+    .list-group-item:last-child {
+        border-radius: 0;
+    }
+}
 
 
 

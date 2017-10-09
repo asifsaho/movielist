@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Movie CRUD with Angular 1.x</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
@@ -10,35 +11,44 @@
     <div class="container" ng-controller="mainController">
         <header class="header">
             <div class="row">
-                <div class="col-md-5">
-                    <div class="btn-group" role="group">
-                        <button ng-click="sortMovie('ASC')" type="button" class="btn btn-default"><i
-                                class="glyphicon glyphicon-chevron-up"></i> Ascending
-                        </button>
+                <div class="col-xs-12">
+                    <div class="nav-item">
+                        <div class="btn-group" role="group">
+                            <button ng-click="sortMovie('ASC')" type="button" class="btn btn-default">
+                                <i class="glyphicon glyphicon-chevron-down"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="btn-group" role="group">
-                        <button ng-click="sortMovie('DESC')" type="button" class="btn btn-default"><i
-                                class="glyphicon glyphicon-chevron-down"></i> Descending
-                        </button>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <label class="inline-label">Filter Genre</label>
-                    <div class="custom-select">
-                        <select class="form-control" ng-model="filterByModel.genre">
-                            <option selected="selected" value="">All</option>
-                            <option value="Action">Action</option>
-                            <option value="Animation">Animation</option>
-                            <option value="Biography">Biography</option>
-                            <option value="Crime">Crime</option>
-                            <option value="Documentory">Documentory</option>
-                            <option value="Horror">Horror</option>
-                        </select>
-                    </div>
-                </div>
 
-                <div class="col-md-2">
-                    <button data-toggle="modal" data-target="#addNewMovie" class="btn btn-success pull-right"><i class="glyphicon glyphicon-plus"></i> Add a Movie</button>
+                    <div class="nav-item">
+                        <div class="btn-group" role="group">
+                            <button ng-click="sortMovie('DESC')" type="button" class="btn btn-default">
+                                <i class="glyphicon glyphicon-chevron-up"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="nav-item mobile-hide">
+                        <label>Filter Genre:</label>
+                    </div>
+
+                    <div class="nav-item">
+                        <div class="custom-select">
+                            <select class="form-control" ng-model="filterByModel.genre">
+                                <option selected="selected" value="">All</option>
+                                <option value="Action">Action</option>
+                                <option value="Animation">Animation</option>
+                                <option value="Biography">Biography</option>
+                                <option value="Crime">Crime</option>
+                                <option value="Documentory">Documentory</option>
+                                <option value="Horror">Horror</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="nav-item pull-right margin-right-0">
+                        <button data-toggle="modal" data-target="#addNewMovie" class="btn btn-success pull-right add-movie"><i class="glyphicon glyphicon-plus"></i> <span>Add a Movie</span></button>
+                    </div>
                 </div>
             </div>
         </header>
