@@ -1,6 +1,9 @@
 # Movielist
 This is a demo movie list project for testing purpose
 
+# Requirements
+* Node JS 8.9.1 LTS
+
 # Installation
 * Make a new project folder Example: ``mkdir movielist``
 * Clone the Repository
