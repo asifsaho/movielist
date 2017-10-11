@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.modal-dialog {
+    margin: 150px auto;
+}
+
+input.form-control {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding-left: 0;
+    border-bottom: 2px solid #c3c3c3;
+    margin-bottom: 20px;
+}
+
+form {
+	margin: 0;
+}
+
+.custom-select {
+    padding: 4px 5;
+    margin: 0;
+    width: 150px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #b7dcf9;
+    border: 0;
+    background-image: url('data:image/svg+xml;utf8,\a <svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M14.77,23.795L5.185,14.21c-0.879-0.879-0.879-2.317,0-3.195l0.8-0.801c0.877-0.878,2.316-0.878,3.194,0  l7.315,7.315l7.316-7.315c0.878-0.878,2.317-0.878,3.194,0l0.8,0.801c0.879,0.878,0.879,2.316,0,3.195l-9.587,9.585  c-0.471,0.472-1.104,0.682-1.723,0.647C15.875,24.477,15.243,24.267,14.77,23.795z" fill="#515151"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: calc(100% - 10px) center;
+}
+
+.custom-select select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.custom-select select:focus {
+    outline: none;
+}
+
+.inline-label {
+    padding: 11px;
+    margin: 0;
+    float: left;
+}
+
+input.form-control:focus {
+	box-shadow: none;
+	border-bottom: 2px solid rgb(81, 157, 232);
+}
+
+.btn {
+    font-size: 15px;
+    margin-left: 5px;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+
+.container {
+	padding-top: 30px;
+}
+
+.header {
+    padding: 15px;
+    background-color: rgb(16,108,200);
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+label {
+	display: block;
+}
+
+.actions {
+    text-align: right;
+}
+
+.btn-group .btn {
+	background-color: rgb(48, 136, 224);
+    border: 3px;
+    color: #fff;
+}
+
+.btn-group .btn:focus {
+    background-color: rgb(21, 102, 183);
+    color: #fff;
+}
+
+.btn-group .glyphicon {
+	margin-right: 5px;
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background: rgb(16,108,200);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+

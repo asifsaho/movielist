@@ -1,0 +1,115 @@
+<html>
+<head>
+    <title>Movie CRUD with Angular 1.x</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+<div ng-app="moviedb">
+    <div class="container" ng-controller="mainController">
+        <header class="header">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="btn-group" role="group">
+                        <button ng-click="sortMovie('ASC')" type="button" class="btn btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i> Ascending
+                        </button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button ng-click="sortMovie('DESC')" type="button" class="btn btn-default"><i
+                                class="glyphicon glyphicon-chevron-down"></i> Descending
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <label class="inline-label">Filter Genre</label>
+                    <div class="custom-select">
+                        <select class="form-control" ng-model="filterByModel.genre">
+                            <option selected="selected" value="">All</option>
+                            <option value="Action">Action</option>
+                            <option value="Animation">Animation</option>
+                            <option value="Biography">Biography</option>
+                            <option value="Crime">Crime</option>
+                            <option value="Documentory">Documentory</option>
+                            <option value="Horror">Horror</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <button data-toggle="modal" data-target="#addNewMovie" class="btn btn-success pull-right"><i class="glyphicon glyphicon-plus"></i> Add a Movie</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="list-group">
+            <div class="list-group-item" ng-repeat="movie in movies | orderBy: sortTrack | filter: filterByModel">
+                <h4 class="list-group-item-heading">{{movie.title}}</h4>
+                <p class="list-group-item-text">
+                    <strong>Duration: </strong>{{movie.duration}} min <br>
+                    <strong>Actors: </strong>{{movie.actors}} <br>
+                    <strong>Director: </strong>{{movie.director}} <br>
+                    <strong>Genre: </strong>{{movie.genre}}
+                </p>
+            </div>
+        </div>
+
+        <!-- Add a new Movie Modal -->
+        <div class="modal fade" id="addNewMovie" tabindex="-1" role="dialog" aria-labelledby="addNewMovie">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Please add the movie details</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form ng-submit="addMovie($event)">
+                            <label>
+                                <span>Title*</span>
+                                <input required ng-model="movieTitle" type="text" class="form-control" placeholder="Ex: The Shawshank Redemption">
+                            </label>
+                            <label>
+                                <span>Director*</span>
+                                <input required ng-model="movieDirector" type="text" class="form-control" placeholder="Ex: Frank Darabont">
+                            </label>
+                            <label>
+                                <span>Duration In Minute*</span>
+                                <input required ng-model="movieDuration" type="number" class="form-control" placeholder="Ex: 142">
+                            </label>
+                            <label>
+                                <span>Actors (comma separated)</span>
+                                <input ng-model="movieActors" type="text" class="form-control" placeholder="Ex: Tim Robbins, Morgan Freeman, Bob Gunton">
+                            </label>
+
+                            <label>
+                                <span>Genre</span>
+                                <select class="form-control" ng-model="movieGenre">
+                                    <option value="Action">Action</option>
+                                    <option value="Animation">Animation</option>
+                                    <option value="Biography">Biography</option>
+                                    <option value="Crime">Crime</option>
+                                    <option value="Documentory">Documentory</option>
+                                    <option value="Horror">Horror</option>
+                                </select>
+                            </label>
+
+                            <div class="actions">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-success"> Add this movie!</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="src/js/app.js"></script>
+</body>
+</html>
